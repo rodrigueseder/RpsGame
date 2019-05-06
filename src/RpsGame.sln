@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RpsGame.Core.Tests", "RpsGa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RpsGame.Client.Console", "RpsGame.Client.Console\RpsGame.Client.Console.csproj", "{59CCB31D-040E-4E61-B91A-052B62712ED9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RpsGame.Api", "RpsGame.Api\RpsGame.Api.csproj", "{84FDAFA3-CB04-4FA9-A8BD-30DAC50F94E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,5 +60,17 @@ Global
 		{59CCB31D-040E-4E61-B91A-052B62712ED9}.Release|x64.Build.0 = Release|Any CPU
 		{59CCB31D-040E-4E61-B91A-052B62712ED9}.Release|x86.ActiveCfg = Release|Any CPU
 		{59CCB31D-040E-4E61-B91A-052B62712ED9}.Release|x86.Build.0 = Release|Any CPU
+		{84FDAFA3-CB04-4FA9-A8BD-30DAC50F94E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84FDAFA3-CB04-4FA9-A8BD-30DAC50F94E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84FDAFA3-CB04-4FA9-A8BD-30DAC50F94E2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{84FDAFA3-CB04-4FA9-A8BD-30DAC50F94E2}.Debug|x64.Build.0 = Debug|Any CPU
+		{84FDAFA3-CB04-4FA9-A8BD-30DAC50F94E2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{84FDAFA3-CB04-4FA9-A8BD-30DAC50F94E2}.Debug|x86.Build.0 = Debug|Any CPU
+		{84FDAFA3-CB04-4FA9-A8BD-30DAC50F94E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84FDAFA3-CB04-4FA9-A8BD-30DAC50F94E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84FDAFA3-CB04-4FA9-A8BD-30DAC50F94E2}.Release|x64.ActiveCfg = Release|Any CPU
+		{84FDAFA3-CB04-4FA9-A8BD-30DAC50F94E2}.Release|x64.Build.0 = Release|Any CPU
+		{84FDAFA3-CB04-4FA9-A8BD-30DAC50F94E2}.Release|x86.ActiveCfg = Release|Any CPU
+		{84FDAFA3-CB04-4FA9-A8BD-30DAC50F94E2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

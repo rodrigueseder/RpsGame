@@ -1,7 +1,7 @@
 
 namespace RpsGame.Core
 {
-    public enum MatchResult : int
+    public enum MatchResultType : int
     {
         Draw = 0,
         Tie,

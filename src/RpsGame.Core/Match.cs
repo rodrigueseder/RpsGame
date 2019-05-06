@@ -12,7 +12,7 @@ namespace RpsGame.Core
         public string Id { get; } = $"Match-{Guid.NewGuid().ToString("N", CultureInfo.InvariantCulture)}";
         public Player Player1 { get; private set; }
         public Player Player2 { get; private set; }
-        public MatchResult Result { get; private set; }
+        public MatchResultType Result { get; private set; }
         public string WinnerId { get; private set; }
         public DateTime Timestamp { get; private set; }
 
@@ -28,28 +28,28 @@ namespace RpsGame.Core
 
             if (this.Player1?.Weapon == null || this.Player2?.Weapon == null)
             {
-                this.Result = MatchResult.Draw;
+                this.Result = MatchResultType.Draw;
                 this.WinnerId = string.Empty;
                 return false;
             }
 
             if (this.Player1.Weapon == this.Player2.Weapon)
             {
-                this.Result = MatchResult.Tie;
+                this.Result = MatchResultType.Tie;
                 this.WinnerId = string.Empty;
                 return true;
             }
 
             if (this.Player1.Weapon.Beats(this.Player2.Weapon, this.CheckAgainstOpponent))
             {
-                this.Result = MatchResult.OneWinner;
+                this.Result = MatchResultType.OneWinner;
                 this.WinnerId = this.Player1.Id;
                 return true;
             }
 
             if (this.Player2.Weapon.Beats(this.Player1.Weapon, this.CheckAgainstOpponent))
             {
-                this.Result = MatchResult.OneWinner;
+                this.Result = MatchResultType.OneWinner;
                 this.WinnerId = this.Player2.Id;
                 return true;
             }

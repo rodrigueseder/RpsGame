@@ -9,14 +9,13 @@ namespace RpsGame.Core.Utils
 
     public static class WeaponUtils
     {
-        public static Dictionary<string, BaseWeapon> GetAvailableWeapons()
+        public static IEnumerable<BaseWeapon> GetAvailableWeapons()
         {
-            var index = 1;
             return Assembly
                 .GetAssembly(typeof(BaseWeapon))
                 .GetTypes()
                 .Where(type => type.IsClass && !type.IsAbstract && type.IsSubclassOf(typeof(BaseWeapon)))
-                .ToDictionary(t => (index++).ToString(), t => (BaseWeapon)Activator.CreateInstance(t));
+                .Select(t => (BaseWeapon)Activator.CreateInstance(t));
         }
     }
 }

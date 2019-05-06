@@ -16,8 +16,14 @@ namespace RpsGame.Client.Console
 
         static void Main(string[] args)
         {
-            availableWeapons = WeaponUtils.GetAvailableWeapons();
+            InitializeAvailableWeapons();
             RunWithConsoleInteraction();
+        }
+
+        private static void InitializeAvailableWeapons()
+        {
+            var index = 1;
+            availableWeapons = WeaponUtils.GetAvailableWeapons().ToDictionary(w => (index++).ToString(), w => w);
         }
 
         private static void RunWithConsoleInteraction()
@@ -57,7 +63,7 @@ namespace RpsGame.Client.Console
             var player1 = new Player(player1Name, player1Weapon);
 
             var player2Name = "AI";
-            var player2Weapon = availableWeapons.GetValueOrDefault(random.Next(1, 3).ToString());
+            var player2Weapon = availableWeapons.GetValueOrDefault(random.Next(0, availableWeapons.Count - 1).ToString());
             var player2 = new Player(player2Name, player2Weapon);
 
             var match = new Match(player1, player2);
@@ -65,7 +71,7 @@ namespace RpsGame.Client.Console
 
             Console.Write($"\n{player1.Name} ({player1.Weapon.Name}) Vs. {player2.Name} ({player2.Weapon.Name}). ");
 
-            if (match.Result != MatchResult.OneWinner)
+            if (match.Result != MatchResultType.OneWinner)
                 Console.WriteLine($"It's a {match.Result}!!!\n\n");
             else
                 Console.WriteLine(match.WinnerId == player1.Id ? "You won!!!\n\n" : "You lost. Try again.\n\n");

@@ -33,7 +33,7 @@ namespace RpsGame.Core.Tests.Unit
 
             // Assert
             Assert.False(matchRunResult);
-            Assert.Equal(MatchResult.Draw, match.Result);
+            Assert.Equal(MatchResultType.Draw, match.Result);
             Assert.Equal(string.Empty, match.WinnerId);
         }
 
@@ -56,7 +56,7 @@ namespace RpsGame.Core.Tests.Unit
 
             // Assert
             Assert.True(matchRunResult);
-            Assert.Equal(MatchResult.Tie, match.Result);
+            Assert.Equal(MatchResultType.Tie, match.Result);
             Assert.Equal(string.Empty, match.WinnerId);
         }
 
@@ -79,7 +79,7 @@ namespace RpsGame.Core.Tests.Unit
 
             // Assert
             Assert.True(matchRunResult);
-            Assert.Equal(MatchResult.OneWinner, match.Result);
+            Assert.Equal(MatchResultType.OneWinner, match.Result);
             Assert.Equal(player1.Id, match.WinnerId);
         }
 
@@ -102,7 +102,7 @@ namespace RpsGame.Core.Tests.Unit
 
             // Assert
             Assert.True(matchRunResult);
-            Assert.Equal(MatchResult.OneWinner, match.Result);
+            Assert.Equal(MatchResultType.OneWinner, match.Result);
             Assert.Equal(player2.Id, match.WinnerId);
         }
     }

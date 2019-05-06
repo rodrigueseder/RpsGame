@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RpsGame.Core\RpsGame.Core.csproj" />
+    <ProjectReference Include="..\RpsGame.Api.Contracts\RpsGame.Api.Contracts.csproj" />
   </ItemGroup>
 
 </Project>

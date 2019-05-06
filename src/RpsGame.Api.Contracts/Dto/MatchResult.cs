@@ -1,5 +1,5 @@
 
-namespace RpsGame.Api.Dto
+namespace RpsGame.Api.Contracts.Dto
 {
     using System;
 

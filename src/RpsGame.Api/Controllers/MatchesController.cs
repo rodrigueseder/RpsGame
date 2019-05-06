@@ -7,7 +7,7 @@ namespace RpsGame.Api.Controllers
     using System.Net;
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Mvc;
-    using RpsGame.Api.Dto;
+    using RpsGame.Api.Contracts.Dto;
     using RpsGame.Core;
     using RpsGame.Core.Utils;
     using RpsGame.Core.Weapons;

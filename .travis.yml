@@ -1,0 +1,11 @@
+dist: bionic
+language: csharp
+mono: none
+dotnet: 2.2.105
+
+install:
+  - dotnet restore ./src/RpsGame.sln
+
+script:
+  - dotnet build ./src/RpsGame.sln -c Release
+  - dotnet test ./src/RpsGame.Core.Tests/RpsGame.Core.Tests.csproj

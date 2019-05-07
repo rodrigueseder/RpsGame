@@ -63,7 +63,7 @@ namespace RpsGame.Client.Console
             var player1 = new Player(player1Name, player1Weapon);
 
             var player2Name = "AI";
-            var player2Weapon = availableWeapons.GetValueOrDefault(random.Next(0, availableWeapons.Count - 1).ToString());
+            var player2Weapon = availableWeapons.GetValueOrDefault(random.Next(1, availableWeapons.Count).ToString());
             var player2 = new Player(player2Name, player2Weapon);
 
             var match = new Match(player1, player2);
